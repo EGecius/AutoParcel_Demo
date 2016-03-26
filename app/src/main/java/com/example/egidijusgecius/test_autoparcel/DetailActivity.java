@@ -14,6 +14,6 @@ public class DetailActivity extends AppCompatActivity {
 		PojoToParcel pojo = getIntent().getExtras().getParcelable(MainActivity.TEST_POJO);
 
 		TextView textView = (TextView) findViewById(R.id.text_view);
-		textView.setText(pojo.getName());
+		textView.setText(pojo.name());
 	}
 }

@@ -1,6 +1,8 @@
 package com.example.egidijusgecius.test_autoparcel;
 
 import android.os.Parcelable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 import auto.parcel.AutoParcel;
 
@@ -10,11 +12,12 @@ import auto.parcel.AutoParcel;
  * Simple demonstration of a POJO implementing @AutoParcel
  */
 @AutoParcel
-abstract class PojoToParcel implements Parcelable {
+abstract public class PojoToParcel implements Parcelable {
 
-	abstract String getName();
+	@NonNull abstract String name();
+	@Nullable abstract String surname();
 
-	static PojoToParcel create(String name) {
-		return new AutoParcel_PojoToParcel(name);
+	public static PojoToParcel create(String name, String surname) {
+		return new AutoParcel_PojoToParcel(name, surname);
 	}
 }

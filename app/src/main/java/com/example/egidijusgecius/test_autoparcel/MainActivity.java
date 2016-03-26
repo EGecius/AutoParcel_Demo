@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 
-				PojoToParcel pojo = PojoToParcel.create("egis");
+				PojoToParcel pojo = PojoToParcel.create("egis", "gecius");
 
 				Intent intent = new Intent(MainActivity.this, DetailActivity.class);
 				intent.putExtra(TEST_POJO, pojo);
